@@ -1,5 +1,6 @@
 # ROSPlan docker image
-FROM ros:melodic
+ARG ROS_DISTRO
+FROM ros:${ROS_DISTRO}
 
 SHELL ["/bin/bash", "-c"]
 WORKDIR /root/ws
@@ -9,7 +10,7 @@ WORKDIR /root/ws
 RUN apt update -qq && apt install python-catkin-tools git vim bash-completion -y -qq
 
 # Create WS
-RUN source /opt/ros/$ROS_DISTRO/setup.bash &&\
+RUN source /opt/ros/${ROS_DISTRO}/setup.bash &&\
     mkdir src &&\
     catkin init &&\
     catkin build --summarize  --no-status
