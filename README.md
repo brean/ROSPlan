@@ -59,7 +59,7 @@ docker run -it --rm kclplanning/rosplan bash
 If you like to build the docker image yourself run:
 
 ```
-docker build -f .Dockerfile --build-arg ROS_DISTRO=noetic .
+docker build -f .Dockerfile --build-arg ROS_DISTRO=noetic -t rosplan:noetic .
 ```
 
 ## Related repositories:
