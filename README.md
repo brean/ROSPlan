@@ -55,6 +55,12 @@ Run an interactive bash shell inside the docker, ready to run ROSPlan:
 docker run -it --rm kclplanning/rosplan bash
 ```
 
+## Build the docker image
+If you like to build the docker image yourself run:
+
+```
+docker build -f .Dockerfile --build-arg ROS_DISTRO=noetic .
+```
 
 ## Related repositories:
 
